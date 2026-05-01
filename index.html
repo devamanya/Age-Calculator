@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Age Calculator | Luxon & NPM</title>
+    <!-- Flatpickr CSS (External Library) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-card">
+        <h1>Age Calculator</h1>
+        <p class="subtitle">Calculate your exact age using Luxon</p>
+
+        <form id="age-form">
+            <div class="input-group">
+                <label for="birthdate">Select Date of Birth</label>
+                <!-- This input will be transformed by Flatpickr -->
+                <input type="text" id="birthdate" placeholder="Click to select date..." readonly>
+            </div>
+            <button type="submit" id="calc-btn">Calculate Age</button>
+        </form>
+
+        <div id="result-container" class="result hidden">
+            <div class="result-item">
+                <span id="years">-</span>
+                <p>Years</p>
+            </div>
+            <div class="result-item">
+                <span id="months">-</span>
+                <p>Months</p>
+            </div>
+            <div class="result-item">
+                <span id="days">-</span>
+                <p>Days</p>
+            </div>
+        </div>
+        <p id="error-msg" class="error hidden">Please select a valid past date.</p>
+    </div>
+
+    <!-- External Libraries (Luxon & Flatpickr) -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
